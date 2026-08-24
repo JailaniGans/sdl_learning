@@ -6,7 +6,18 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-find_package(SDL3 CONFIG REQUIRED)
+file(GLOB lib "lib/*.cpp")
 
-add_executable(main main.cpp)
-target_link_libraries(main PRIVATE SDL3::SDL3)
+find_package(SDL3 CONFIG REQUIRED)
+find_package(OpenCV REQUIRED)
+
+add_executable(main 
+	main.cpp
+	${lib}
+	)
+
+
+target_link_libraries(main PRIVATE 
+	SDL3::SDL3
+	!${OpenCV_LIBS}
+	)
