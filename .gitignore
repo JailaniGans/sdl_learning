@@ -1,1 +1,21 @@
-build/
+# CMake build output
+/build/
+/cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Compiled binaries and object files
+*.o
+*.obj
+*.out
+*.exe
+*.pdb
+*.ilk
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~

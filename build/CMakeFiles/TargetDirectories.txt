@@ -1,3 +1,0 @@
-/home/kirito/project/C_project/build/CMakeFiles/main.dir
-/home/kirito/project/C_project/build/CMakeFiles/edit_cache.dir
-/home/kirito/project/C_project/build/CMakeFiles/rebuild_cache.dir
