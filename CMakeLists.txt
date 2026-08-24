@@ -17,7 +17,7 @@ add_executable(main
 	)
 
 
-target_link_libraries(main PRIVATE 
+target_link_libraries(main PRIVATE
 	SDL3::SDL3
-	!${OpenCV_LIBS}
+	${OpenCV_LIBS}
 	)

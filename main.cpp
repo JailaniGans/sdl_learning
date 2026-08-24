@@ -1,6 +1,5 @@
-#include <SDL3/SDL.h>
 #include <SDL3/SDL_main.h> // Wajib di file tempat fungsi main() berada
-#include "JendelaSDL.hpp"   // Memanggil class buatan Anda
+#include "lib/window.hpp"
 
 int main(int argc, char* argv[]) {
     JendelaSDL aplikasi;
@@ -9,11 +8,12 @@ int main(int argc, char* argv[]) {
         return -1;
     }
 
-    // Main Loop menjadi sangat bersih
     while (aplikasi.IsRunning()) {
         aplikasi.HandleEvent();
-        
-        // Anda bisa menyisipkan logika OpenCV atau Machine Learning di sini nanti
+
+        aplikasi.MulaiRender();
+        aplikasi.GambarLingkaran(400.0F, 300.0F, 15.0F, 0, 200, 255);
+        aplikasi.SelesaiRender();
     }
 
     return 0;
